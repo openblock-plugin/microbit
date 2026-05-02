@@ -1,0 +1,57 @@
+{
+  "name": "microbit",
+  "version": "1.0.0",
+  "author": "ArthurZheng",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openblock-plugin/microbit.git"
+  },
+  "type": "module",
+  "scripts": {
+    "prepare": "husky",
+    "dev": "npx openblock-registry-cli dev",
+    "build": "npx openblock-registry-cli build",
+    "build:obfuscate": "npx openblock-registry-cli build --obfuscate",
+    "publish": "npx openblock-registry-cli publish",
+    "publish:dry": "npx openblock-registry-cli publish --dry-run",
+    "validate": "npx openblock-registry-cli validate",
+    "i18n:update": "npx openblock-registry-cli i18n update",
+    "lint": "eslint . --ext .js --fix"
+  },
+  "openblock": {
+    "name": "micro:bit",
+    "deviceId": "microbit",
+    "manufactor": "microbit",
+    "learnMore": "https://microbit.org/",
+    "type": "microbit",
+    "iconURL": "./assets/microbit.png",
+    "description": {
+      "formatMessage": {
+        "id": "microbit.description",
+        "default": "The pocket-sized computer transforming digital skills learning."
+      }
+    },
+    "bluetoothRequired": false,
+    "serialportRequired": true,
+    "defaultBaudRate": "115200",
+    "internetConnectionRequired": false,
+    "launchPeripheralConnectionFlow": true,
+    "useAutoScan": false,
+    "connectionIconURL": "./assets/microbit-illustration.svg",
+    "connectionSmallIconURL": "./assets/microbit-small.svg",
+    "main": "./src/microbit.js",
+    "generator": "./src/generator.js",
+    "translations": "./src/translations.js",
+    "programMode": ["upload"],
+    "tags": ["microbit"],
+    "helpLink": "https://wiki.openblock.cc/general-hardware-guidelines/boards/microbit",
+    "libraries": "./libraries"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.3.0",
+    "eslint-config-scratch": "^5.0.0",
+    "husky": "^9.0.0"
+  }
+}
