@@ -1,4 +1,4 @@
-const { formatMessage, ArgumentType, BlockType, CommonPeripheral } = window.Scratch;
+const {formatMessage, ArgumentType, BlockType, CommonPeripheral} = window.Scratch;
 
 const PNPID_LIST = [
     'USB\\VID_0D28&PID_0204'
@@ -45,9 +45,23 @@ const Axis = {
 };
 
 const Pins = {
-    P0: '0', P1: '1', P2: '2', P3: '3', P4: '4', P5: '5', P6: '6', P7: '7',
-    P8: '8', P9: '9', P10: '10', P11: '11', P12: '12', P13: '13', P14: '14',
-    P15: '15', P16: '16'
+    P0: '0',
+    P1: '1',
+    P2: '2',
+    P3: '3',
+    P4: '4',
+    P5: '5',
+    P6: '6',
+    P7: '7',
+    P8: '8',
+    P9: '9',
+    P10: '10',
+    P11: '11',
+    P12: '12',
+    P13: '13',
+    P14: '14',
+    P15: '15',
+    P16: '16'
 };
 
 const Level = {
@@ -89,23 +103,59 @@ class OpenBlockMicrobitDevice {
 
     get LEDBRT_MENU () {
         return [
-            { text: '0', value: '0' },
-            { text: '1', value: '1' },
-            { text: '2', value: '2' },
-            { text: '3', value: '3' },
-            { text: '4', value: '4' },
-            { text: '5', value: '5' },
-            { text: '6', value: '6' },
-            { text: '7', value: '7' },
-            { text: '8', value: '8' },
-            { text: '9', value: '9' }
+            {
+                text: '0',
+                value: '0'
+            },
+            {
+                text: '1',
+                value: '1'
+            },
+            {
+                text: '2',
+                value: '2'
+            },
+            {
+                text: '3',
+                value: '3'
+            },
+            {
+                text: '4',
+                value: '4'
+            },
+            {
+                text: '5',
+                value: '5'
+            },
+            {
+                text: '6',
+                value: '6'
+            },
+            {
+                text: '7',
+                value: '7'
+            },
+            {
+                text: '8',
+                value: '8'
+            },
+            {
+                text: '9',
+                value: '9'
+            }
         ];
     }
 
     get KEYS_MENU () {
         return [
-            { text: 'A', value: Key.A },
-            { text: 'B', value: Key.B }
+            {
+                text: 'A',
+                value: Key.A
+            },
+            {
+                text: 'B',
+                value: Key.B
+            }
         ];
     }
 
@@ -175,9 +225,18 @@ class OpenBlockMicrobitDevice {
                 }),
                 value: Gestrue.Freefall
             },
-            { text: '3g', value: Gestrue.G3 },
-            { text: '6g', value: Gestrue.G6 },
-            { text: '8g', value: Gestrue.G8 }
+            {
+                text: '3g',
+                value: Gestrue.G3
+            },
+            {
+                text: '6g',
+                value: Gestrue.G6
+            },
+            {
+                text: '8g',
+                value: Gestrue.G8
+            }
         ];
     }
 
@@ -212,23 +271,74 @@ class OpenBlockMicrobitDevice {
 
     get PINS_MENU () {
         return [
-            { text: 'P0', value: Pins.P0 },
-            { text: 'P1', value: Pins.P1 },
-            { text: 'P2', value: Pins.P2 },
-            { text: 'P3', value: Pins.P3 },
-            { text: 'P4', value: Pins.P4 },
-            { text: 'P5', value: Pins.P5 },
-            { text: 'P6', value: Pins.P6 },
-            { text: 'P7', value: Pins.P7 },
-            { text: 'P8', value: Pins.P8 },
-            { text: 'P9', value: Pins.P9 },
-            { text: 'P10', value: Pins.P10 },
-            { text: 'P11', value: Pins.P11 },
-            { text: 'P12', value: Pins.P12 },
-            { text: 'P13', value: Pins.P13 },
-            { text: 'P14', value: Pins.P14 },
-            { text: 'P15', value: Pins.P15 },
-            { text: 'P16', value: Pins.P16 }
+            {
+                text: 'P0',
+                value: Pins.P0
+            },
+            {
+                text: 'P1',
+                value: Pins.P1
+            },
+            {
+                text: 'P2',
+                value: Pins.P2
+            },
+            {
+                text: 'P3',
+                value: Pins.P3
+            },
+            {
+                text: 'P4',
+                value: Pins.P4
+            },
+            {
+                text: 'P5',
+                value: Pins.P5
+            },
+            {
+                text: 'P6',
+                value: Pins.P6
+            },
+            {
+                text: 'P7',
+                value: Pins.P7
+            },
+            {
+                text: 'P8',
+                value: Pins.P8
+            },
+            {
+                text: 'P9',
+                value: Pins.P9
+            },
+            {
+                text: 'P10',
+                value: Pins.P10
+            },
+            {
+                text: 'P11',
+                value: Pins.P11
+            },
+            {
+                text: 'P12',
+                value: Pins.P12
+            },
+            {
+                text: 'P13',
+                value: Pins.P13
+            },
+            {
+                text: 'P14',
+                value: Pins.P14
+            },
+            {
+                text: 'P15',
+                value: Pins.P15
+            },
+            {
+                text: 'P16',
+                value: Pins.P16
+            }
         ];
     }
 
@@ -255,20 +365,47 @@ class OpenBlockMicrobitDevice {
 
     get ANALOG_PINS_MENU () {
         return [
-            { text: 'P0', value: Pins.P0 },
-            { text: 'P1', value: Pins.P1 },
-            { text: 'P2', value: Pins.P2 },
-            { text: 'P3', value: Pins.P3 },
-            { text: 'P4', value: Pins.P4 },
-            { text: 'P10', value: Pins.P10 }
+            {
+                text: 'P0',
+                value: Pins.P0
+            },
+            {
+                text: 'P1',
+                value: Pins.P1
+            },
+            {
+                text: 'P2',
+                value: Pins.P2
+            },
+            {
+                text: 'P3',
+                value: Pins.P3
+            },
+            {
+                text: 'P4',
+                value: Pins.P4
+            },
+            {
+                text: 'P10',
+                value: Pins.P10
+            }
         ];
     }
 
     get TOUCH_PINS_MENU () {
         return [
-            { text: 'P0', value: Pins.P0 },
-            { text: 'P1', value: Pins.P1 },
-            { text: 'P2', value: Pins.P2 }
+            {
+                text: 'P0',
+                value: Pins.P0
+            },
+            {
+                text: 'P1',
+                value: Pins.P1
+            },
+            {
+                text: 'P2',
+                value: Pins.P2
+            }
         ];
     }
 
@@ -276,7 +413,7 @@ class OpenBlockMicrobitDevice {
         const channel = [];
 
         for (let i = 0; i < 84; i++) {
-            channel.push({ text: `${i}`, value: `${i}` });
+            channel.push({text: `${i}`, value: `${i}`});
         }
         return channel;
     }
@@ -309,8 +446,16 @@ class OpenBlockMicrobitDevice {
                         }),
                         blockType: BlockType.COMMAND,
                         arguments: {
-                            PIN: { type: ArgumentType.STRING, menu: 'pins', defaultValue: Pins.P0 },
-                            LEVEL: { type: ArgumentType.STRING, menu: 'level', defaultValue: Level.High }
+                            PIN: {
+                                type: ArgumentType.STRING,
+                                menu: 'pins',
+                                defaultValue: Pins.P0
+                            },
+                            LEVEL: {
+                                type: ArgumentType.STRING,
+                                menu: 'level',
+                                defaultValue: Level.High
+                            }
                         }
                     },
                     {
@@ -322,8 +467,15 @@ class OpenBlockMicrobitDevice {
                         }),
                         blockType: BlockType.COMMAND,
                         arguments: {
-                            PIN: { type: ArgumentType.STRING, menu: 'pins', defaultValue: Pins.P0 },
-                            OUT: { type: ArgumentType.UINT10_NUMBER, defaultValue: '1023' }
+                            PIN: {
+                                type: ArgumentType.STRING,
+                                menu: 'pins',
+                                defaultValue: Pins.P0
+                            },
+                            OUT: {
+                                type: ArgumentType.UINT10_NUMBER,
+                                defaultValue: '1023'
+                            }
                         }
                     },
                     '---',
@@ -336,7 +488,11 @@ class OpenBlockMicrobitDevice {
                         }),
                         blockType: BlockType.BOOLEAN,
                         arguments: {
-                            PIN: { type: ArgumentType.STRING, menu: 'pins', defaultValue: Pins.P0 }
+                            PIN: {
+                                type: ArgumentType.STRING,
+                                menu: 'pins',
+                                defaultValue: Pins.P0
+                            }
                         }
                     },
                     {
@@ -348,7 +504,11 @@ class OpenBlockMicrobitDevice {
                         }),
                         blockType: BlockType.REPORTER,
                         arguments: {
-                            PIN: { type: ArgumentType.STRING, menu: 'analogPins', defaultValue: Pins.P0 }
+                            PIN: {
+                                type: ArgumentType.STRING,
+                                menu: 'analogPins',
+                                defaultValue: Pins.P0
+                            }
                         }
                     },
                     '---',
@@ -361,15 +521,28 @@ class OpenBlockMicrobitDevice {
                         }),
                         blockType: BlockType.REPORTER,
                         arguments: {
-                            PIN: { type: ArgumentType.STRING, menu: 'touchPins', defaultValue: Pins.P0 }
+                            PIN: {
+                                type: ArgumentType.STRING,
+                                menu: 'touchPins',
+                                defaultValue: Pins.P0
+                            }
                         }
                     }
                 ],
                 menus: {
-                    pins: { items: this.PINS_MENU },
-                    level: { acceptReporters: true, items: this.LEVEL_MENU },
-                    analogPins: { items: this.ANALOG_PINS_MENU },
-                    touchPins: { items: this.TOUCH_PINS_MENU }
+                    pins: {
+                        items: this.PINS_MENU
+                    },
+                    level: {
+                        acceptReporters: true,
+                        items: this.LEVEL_MENU
+                    },
+                    analogPins: {
+                        items: this.ANALOG_PINS_MENU
+                    },
+                    touchPins: {
+                        items: this.TOUCH_PINS_MENU
+                    }
                 }
             },
             {
@@ -392,7 +565,10 @@ class OpenBlockMicrobitDevice {
                         }),
                         blockType: BlockType.COMMAND,
                         arguments: {
-                            VALUE: { type: ArgumentType.MATRIX, defaultValue: '0101010101100010101000100' }
+                            VALUE: {
+                                type: ArgumentType.MATRIX,
+                                defaultValue: '0101010101100010101000100'
+                            }
                         }
                     },
                     {
@@ -404,8 +580,14 @@ class OpenBlockMicrobitDevice {
                         }),
                         blockType: BlockType.COMMAND,
                         arguments: {
-                            VALUE: { type: ArgumentType.MATRIX, defaultValue: '0101010101100010101000100' },
-                            TIME: { type: ArgumentType.NUMBER, defaultValue: '1' }
+                            VALUE: {
+                                type: ArgumentType.MATRIX,
+                                defaultValue: '0101010101100010101000100'
+                            },
+                            TIME: {
+                                type: ArgumentType.NUMBER,
+                                defaultValue: '1'
+                            }
                         }
                     },
                     {
@@ -417,7 +599,10 @@ class OpenBlockMicrobitDevice {
                         }),
                         blockType: BlockType.COMMAND,
                         arguments: {
-                            TEXT: { type: ArgumentType.STRING, defaultValue: 'Hello OpenBlock' }
+                            TEXT: {
+                                type: ArgumentType.STRING,
+                                defaultValue: 'Hello OpenBlock'
+                            }
                         }
                     },
                     {
@@ -429,7 +614,10 @@ class OpenBlockMicrobitDevice {
                         }),
                         blockType: BlockType.COMMAND,
                         arguments: {
-                            TEXT: { type: ArgumentType.STRING, defaultValue: 'Hello OpenBlock' }
+                            TEXT: {
+                                type: ArgumentType.STRING,
+                                defaultValue: 'Hello OpenBlock'
+                            }
                         }
                     },
                     '---',
@@ -452,9 +640,19 @@ class OpenBlockMicrobitDevice {
                         }),
                         blockType: BlockType.COMMAND,
                         arguments: {
-                            STATE: { type: ArgumentType.STRING, menu: 'ledState', defaultValue: LedState.On },
-                            X: { type: ArgumentType.NUMBER, defaultValue: '0' },
-                            Y: { type: ArgumentType.NUMBER, defaultValue: '0' }
+                            STATE: {
+                                type: ArgumentType.STRING,
+                                menu: 'ledState',
+                                defaultValue: LedState.On
+                            },
+                            X: {
+                                type: ArgumentType.NUMBER,
+                                defaultValue: '0'
+                            },
+                            Y: {
+                                type: ArgumentType.NUMBER,
+                                defaultValue: '0'
+                            }
                         }
                     },
                     {
@@ -466,15 +664,30 @@ class OpenBlockMicrobitDevice {
                         }),
                         blockType: BlockType.COMMAND,
                         arguments: {
-                            X: { type: ArgumentType.NUMBER, defaultValue: '0' },
-                            Y: { type: ArgumentType.NUMBER, defaultValue: '0' },
-                            BRT: { type: ArgumentType.STRING, menu: 'ledBrightness', defaultValue: '9' }
+                            X: {
+                                type: ArgumentType.NUMBER,
+                                defaultValue: '0'
+                            },
+                            Y: {
+                                type: ArgumentType.NUMBER,
+                                defaultValue: '0'
+                            },
+                            BRT: {
+                                type: ArgumentType.STRING,
+                                menu: 'ledBrightness',
+                                defaultValue: '9'
+                            }
                         }
                     }
                 ],
                 menus: {
-                    ledState: { items: this.LEDSTATE_MENU },
-                    ledBrightness: { acceptReporters: true, items: this.LEDBRT_MENU }
+                    ledState: {
+                        items: this.LEDSTATE_MENU
+                    },
+                    ledBrightness: {
+                        acceptReporters: true,
+                        items: this.LEDBRT_MENU
+                    }
                 }
             },
             {
@@ -498,7 +711,11 @@ class OpenBlockMicrobitDevice {
                         }),
                         blockType: BlockType.BOOLEAN,
                         arguments: {
-                            KEY: { type: ArgumentType.STRING, menu: 'keys', defaultValue: Key.A }
+                            KEY: {
+                                type: ArgumentType.STRING,
+                                menu: 'keys',
+                                defaultValue: Key.A
+                            }
                         }
                     },
                     '---',
@@ -511,7 +728,11 @@ class OpenBlockMicrobitDevice {
                         }),
                         blockType: BlockType.BOOLEAN,
                         arguments: {
-                            STA: { type: ArgumentType.STRING, menu: 'gestrues', defaultValue: Gestrue.Shake }
+                            STA: {
+                                type: ArgumentType.STRING,
+                                menu: 'gestrues',
+                                defaultValue: Gestrue.Shake
+                            }
                         }
                     },
                     {
@@ -523,7 +744,11 @@ class OpenBlockMicrobitDevice {
                         }),
                         blockType: BlockType.REPORTER,
                         arguments: {
-                            AXIS: { type: ArgumentType.STRING, menu: 'axis', defaultValue: Axis.X }
+                            AXIS: {
+                                type: ArgumentType.STRING,
+                                menu: 'axis',
+                                defaultValue: Axis.X
+                            }
                         }
                     },
                     '---',
@@ -591,9 +816,15 @@ class OpenBlockMicrobitDevice {
                     }
                 ],
                 menus: {
-                    keys: { items: this.KEYS_MENU },
-                    gestrues: { items: this.GESTRUES_MENU },
-                    axis: { items: this.AXIS_MENU }
+                    keys: {
+                        items: this.KEYS_MENU
+                    },
+                    gestrues: {
+                        items: this.GESTRUES_MENU
+                    },
+                    axis: {
+                        items: this.AXIS_MENU
+                    }
                 }
             },
             {
@@ -645,7 +876,10 @@ class OpenBlockMicrobitDevice {
                         }),
                         blockType: BlockType.COMMAND,
                         arguments: {
-                            TEXT: { type: ArgumentType.STRING, defaultValue: 'Hello OpenBlock' }
+                            TEXT: {
+                                type: ArgumentType.STRING,
+                                defaultValue: 'Hello OpenBlock'
+                            }
                         }
                     },
                     {
@@ -667,12 +901,18 @@ class OpenBlockMicrobitDevice {
                         }),
                         blockType: BlockType.COMMAND,
                         arguments: {
-                            CH: { type: ArgumentType.STRING, menu: 'channel', defaultValue: '0' }
+                            CH: {
+                                type: ArgumentType.STRING,
+                                menu: 'channel',
+                                defaultValue: '0'
+                            }
                         }
                     }
                 ],
                 menus: {
-                    channel: { items: this.CHANNEL_MENU }
+                    channel: {
+                        items: this.CHANNEL_MENU
+                    }
                 }
             },
             {
@@ -696,11 +936,15 @@ class OpenBlockMicrobitDevice {
                         }),
                         blockType: BlockType.COMMAND,
                         arguments: {
-                            TEXT: { type: ArgumentType.STRING, defaultValue: 'Hello OpenBlock' }
+                            TEXT: {
+                                type: ArgumentType.STRING,
+                                defaultValue: 'Hello OpenBlock'
+                            }
                         }
                     }
                 ],
-                menus: { }
+                menus: {
+                }
             }
         ];
     }

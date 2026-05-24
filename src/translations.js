@@ -18,16 +18,40 @@
 export default {
     'interface': {
         'en': {
-            'microbit.description': 'The pocket-sized computer transforming digital skills learning.'
+            'microbit.description': 'The pocket-sized computer transforming digital skills learning.',
+            'microbit.examples.blinkIcon.name': 'Blink Icon',
+            'microbit.examples.blinkIcon.description': 'Blink an icon on the 5x5 LED matrix.',
+            'microbit.examples.button.name': 'Button',
+            'microbit.examples.button.description': 'Show an icon on the LED matrix while button A is pressed.',
+            'microbit.examples.serialTemperature.name': 'Serial Temperature',
+            'microbit.examples.serialTemperature.description': 'Print the on-board temperature to the Serial Monitor every second.'
         },
         'ru': {
-            'microbit.description': 'Карманный компьютер, преобразующий обучение цифровым навыкам.'
+            'microbit.description': 'Карманный компьютер, преобразующий обучение цифровым навыкам.',
+            'microbit.examples.blinkIcon.name': 'Мигающий значок',
+            'microbit.examples.blinkIcon.description': 'Мигание значка на светодиодной матрице 5×5.',
+            'microbit.examples.button.name': 'Кнопка',
+            'microbit.examples.button.description': 'Показывать значок на светодиодной матрице, пока нажата кнопка A.',
+            'microbit.examples.serialTemperature.name': 'Серийная температура',
+            'microbit.examples.serialTemperature.description': 'Печать температуры встроенного датчика в монитор последовательного порта каждую секунду.'
         },
         'zh-cn': {
-            'microbit.description': '改变数字技能学习的口袋大小计算机。'
+            'microbit.description': '改变数字技能学习的口袋大小计算机。',
+            'microbit.examples.blinkIcon.name': '闪烁图标',
+            'microbit.examples.blinkIcon.description': '在 5x5 LED 矩阵上闪烁显示一个图标。',
+            'microbit.examples.button.name': '按键',
+            'microbit.examples.button.description': '按住按键 A 时在 LED 矩阵上显示一个图标。',
+            'microbit.examples.serialTemperature.name': '串口温度',
+            'microbit.examples.serialTemperature.description': '每秒把板载温度打印到串口监视器。'
         },
         'zh-tw': {
-            'microbit.description': '改變數位技能學習的口袋大小電腦。'
+            'microbit.description': '改變數位技能學習的口袋大小電腦。',
+            'microbit.examples.blinkIcon.name': '閃爍圖示',
+            'microbit.examples.blinkIcon.description': '在 5x5 LED 矩陣上閃爍顯示一個圖示。',
+            'microbit.examples.button.name': '按鍵',
+            'microbit.examples.button.description': '按住按鍵 A 時在 LED 矩陣上顯示一個圖示。',
+            'microbit.examples.serialTemperature.name': '序列溫度',
+            'microbit.examples.serialTemperature.description': '每秒將板載溫度列印到序列監視器。'
         }
     },
     'extensions': {
